@@ -39,8 +39,12 @@ namespace WindowsFormsApplication1
                new System.IO.StreamReader("test.txt");
             while ((line = file.ReadLine()) != null)
             {
-                tumkuponlar.Add(line);
-                counter++;
+                if (line.Trim()!="")
+                {
+                    tumkuponlar.Add(line);
+                    counter++;
+                }
+              
             }
 
          file.Close();
